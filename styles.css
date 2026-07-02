@@ -253,8 +253,6 @@ h3 {
 .about-grid > div,
 .profile-panel,
 .value-card,
-.voice-card,
-.result-card,
 .contact-form {
   background: var(--white);
   border: 1px solid var(--line);
@@ -442,22 +440,11 @@ h3 {
   border-bottom: 1px solid rgba(201, 34, 54, 0.35);
 }
 
-.news-loading,
-.news-note {
+.news-loading {
   width: min(920px, 100%);
   margin: 0 auto;
   color: var(--muted);
   text-align: center;
-}
-
-.news-note {
-  margin-top: 16px;
-  font-size: 13px;
-}
-
-.news-note code {
-  color: var(--red-dark);
-  font-weight: 800;
 }
 
 .reason {
@@ -759,40 +746,6 @@ h3 {
   gap: 18px;
 }
 
-.voice-card,
-.result-card {
-  padding: 28px;
-}
-
-.voice-card span {
-  color: var(--muted);
-  font-weight: 800;
-}
-
-.rating {
-  margin-bottom: 12px;
-  color: var(--red);
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.result-card {
-  color: var(--white);
-  background: var(--green);
-  border-color: var(--green);
-}
-
-.result-card strong {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 25px;
-  line-height: 1.4;
-}
-
-.result-card p {
-  color: rgba(255, 255, 255, 0.84);
-}
-
 .source-links {
   display: flex;
   flex-wrap: wrap;
@@ -813,6 +766,59 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 999px;
   font-weight: 800;
+}
+
+.subpage {
+  background: var(--paper);
+}
+
+.policy {
+  padding-top: clamp(48px, 7vw, 84px);
+}
+
+.policy .section-heading h1 {
+  margin-bottom: 0;
+  font-size: clamp(34px, 4.8vw, 54px);
+  line-height: 1.2;
+}
+
+.policy-body {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 48px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.policy-body h2 {
+  margin: 34px 0 10px;
+  font-size: 22px;
+}
+
+.policy-body h2:first-of-type {
+  margin-top: 26px;
+}
+
+.policy-body p,
+.policy-body li {
+  color: var(--muted);
+}
+
+.policy-body ul {
+  margin: 0 0 18px;
+  padding-left: 1.2em;
+}
+
+.policy-body address {
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-style: normal;
+  line-height: 1.8;
 }
 
 .cta-section {
@@ -897,14 +903,6 @@ textarea {
   width: 100%;
 }
 
-.form-note {
-  margin: -6px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
-  text-align: center;
-}
-
 .footer {
   display: flex;
   align-items: center;
@@ -918,6 +916,26 @@ textarea {
 .footer p {
   margin: 0;
   font-weight: 800;
+}
+
+.footer address {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.36);
 }
 
 .footer small {
@@ -1058,5 +1076,10 @@ textarea {
 
   .footer {
     display: block;
+  }
+
+  .footer-links {
+    justify-items: start;
+    margin-top: 18px;
   }
 }
