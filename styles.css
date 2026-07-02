@@ -89,12 +89,13 @@ img {
   align-items: start;
   gap: clamp(24px, 3.2vw, 36px);
   min-height: auto;
-  padding: clamp(24px, 4vw, 46px) clamp(20px, 5vw, 72px) 54px;
+  padding: 0 0 54px;
 }
 
 .hero-copy {
   max-width: 1040px;
   margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 72px);
   text-align: center;
 }
 
@@ -201,17 +202,14 @@ h3 {
 
 .hero-media {
   overflow: hidden;
-  width: min(1280px, 100%);
+  width: 100%;
   margin: 0 auto;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
 }
 
 .hero-media img {
   width: 100%;
   height: auto;
-  max-height: 430px;
+  max-height: none;
   object-fit: cover;
   object-position: center center;
 }
@@ -995,7 +993,7 @@ textarea {
   }
 
   .hero {
-    padding: 24px 18px 48px;
+    padding: 0 0 48px;
   }
 
   h1 {
