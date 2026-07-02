@@ -309,8 +309,7 @@ h3 {
   box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
 }
 
-.counselor-card > img,
-.salon-card > img {
+.counselor-card > img {
   width: 100%;
   height: 310px;
   object-fit: cover;
@@ -320,13 +319,14 @@ h3 {
   object-position: center 18%;
 }
 
-.salon-card > img {
-  object-position: center center;
-}
-
 .counselor-card > div,
 .salon-card > div {
   padding: 28px;
+}
+
+.salon-card {
+  display: grid;
+  align-content: center;
 }
 
 .counselor-card p:last-child,
@@ -675,7 +675,7 @@ h3 {
 
 .flow-list li {
   position: relative;
-  min-height: 230px;
+  min-height: 250px;
   padding: 30px 26px;
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1015,8 +1015,7 @@ textarea {
     height: 280px;
   }
 
-  .counselor-card > img,
-  .salon-card > img {
+  .counselor-card > img {
     height: 260px;
   }
 
