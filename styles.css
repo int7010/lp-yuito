@@ -87,9 +87,9 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
-  gap: clamp(28px, 4vw, 44px);
-  min-height: calc(100vh - 70px);
-  padding: clamp(40px, 6vw, 78px) clamp(20px, 5vw, 72px) 54px;
+  gap: clamp(24px, 3.2vw, 36px);
+  min-height: auto;
+  padding: clamp(24px, 4vw, 46px) clamp(20px, 5vw, 72px) 54px;
 }
 
 .hero-copy {
@@ -114,7 +114,7 @@ p {
 
 h1 {
   margin-bottom: 24px;
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(30px, 4.1vw, 52px);
   line-height: 1.18;
   letter-spacing: 0;
 }
@@ -201,7 +201,7 @@ h3 {
 
 .hero-media {
   overflow: hidden;
-  width: min(1180px, 100%);
+  width: min(1280px, 100%);
   margin: 0 auto;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -210,7 +210,8 @@ h3 {
 
 .hero-media img {
   width: 100%;
-  height: clamp(320px, 48vw, 620px);
+  height: auto;
+  max-height: 430px;
   object-fit: cover;
   object-position: center center;
 }
@@ -722,8 +723,7 @@ textarea {
   }
 
   .hero-media img {
-    height: 48vh;
-    min-height: 330px;
+    max-height: none;
   }
 
   .cta-section {
@@ -756,7 +756,7 @@ textarea {
   }
 
   h1 {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   .lead {
