@@ -233,9 +233,12 @@ h3 {
 .value-list,
 .voice-grid,
 .online-inner,
+.profile-grid,
+.news-list,
 .reason-list,
 .price-list,
 .flow-list,
+.faq-list,
 .cta-section {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -284,6 +287,176 @@ h3 {
 .profile-title {
   margin-bottom: 10px;
   color: var(--green);
+  font-weight: 800;
+}
+
+.profile {
+  background: #fff;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+.counselor-card,
+.salon-card {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+}
+
+.counselor-card > img,
+.salon-card > img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.counselor-card > img {
+  object-position: center 18%;
+}
+
+.salon-card > img {
+  object-position: center center;
+}
+
+.counselor-card > div,
+.salon-card > div {
+  padding: 28px;
+}
+
+.counselor-card p:last-child,
+.salon-card p:last-child {
+  margin-bottom: 0;
+}
+
+.salon-card dl {
+  display: grid;
+  gap: 0;
+  margin: 0 0 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.salon-card dl div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+}
+
+.salon-card dl div:first-child {
+  border-top: 0;
+}
+
+.salon-card dt {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.salon-card dd {
+  margin: 0;
+}
+
+.trust-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 46px);
+  width: min(920px, 100%);
+  margin: 24px auto 0;
+  padding: 24px clamp(22px, 4vw, 42px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+}
+
+.trust-banner img {
+  width: min(220px, 36vw);
+  height: auto;
+}
+
+.trust-banner p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.news {
+  background: var(--paper);
+}
+
+.news-list {
+  display: grid;
+  gap: 12px;
+  max-width: 920px;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 22px;
+  align-items: center;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(73, 36, 43, 0.07);
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.news-tag {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 0 10px;
+  color: var(--red-dark);
+  background: #ffe9ec;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.news-item h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.news-item a {
+  border-bottom: 1px solid rgba(201, 34, 54, 0.35);
+}
+
+.news-loading,
+.news-note {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  color: var(--muted);
+  text-align: center;
+}
+
+.news-note {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.news-note code {
+  color: var(--red-dark);
   font-weight: 800;
 }
 
@@ -526,6 +699,56 @@ h3 {
   color: var(--muted);
 }
 
+.faq {
+  background: var(--paper);
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 920px;
+}
+
+.faq-list details {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(73, 36, 43, 0.07);
+}
+
+.faq-list summary {
+  position: relative;
+  padding: 20px 56px 20px 24px;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  color: var(--red);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.faq-list details[open] summary::after {
+  content: "-";
+}
+
+.faq-list p {
+  margin: 0;
+  padding: 0 24px 22px;
+  color: var(--muted);
+}
+
 .voices {
   background: linear-gradient(180deg, var(--paper), #f7ecec);
 }
@@ -711,6 +934,8 @@ textarea {
   .value-list,
   .voice-grid,
   .online-inner,
+  .profile-grid,
+  .news-list,
   .reason-list,
   .price-list,
   .flow-list,
@@ -788,6 +1013,39 @@ textarea {
 
   .profile-panel img {
     height: 280px;
+  }
+
+  .counselor-card > img,
+  .salon-card > img {
+    height: 260px;
+  }
+
+  .salon-card dl div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .trust-banner {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .trust-banner img {
+    width: 190px;
+  }
+
+  .trust-banner p {
+    font-size: 17px;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .news-meta {
+    flex-wrap: wrap;
   }
 
   .value-card {
