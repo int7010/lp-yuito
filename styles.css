@@ -278,6 +278,10 @@ h3 {
   object-position: center 18%;
 }
 
+.profile-panel img.advisor-speaking {
+  object-position: 62% 30%;
+}
+
 .profile-panel div {
   padding: 26px;
 }
