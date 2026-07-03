@@ -341,6 +341,44 @@ h3 {
   justify-content: flex-start;
 }
 
+.diagnosis {
+  background: var(--paper);
+}
+
+.diagnosis .section-heading p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 12px auto 0;
+  color: var(--muted);
+}
+
+.diagnosis-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.diagnosis-list a {
+  display: block;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diagnosis-list a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(73, 36, 43, 0.12);
+}
+
+.diagnosis-list img {
+  width: 100%;
+  height: auto;
+}
+
 .profile-panel {
   overflow: hidden;
 }
@@ -866,6 +904,18 @@ h3 {
   text-align: right;
 }
 
+.trial-note {
+  width: min(1120px, 100%);
+  margin: 14px auto 0;
+  padding: 12px 16px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
 .premium-note {
   display: grid;
   grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1fr);
@@ -1112,6 +1162,22 @@ h3 {
   color: var(--muted);
 }
 
+.consultation-banner {
+  display: block;
+  width: min(360px, 100%);
+  margin: 22px 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(73, 36, 43, 0.08);
+}
+
+.consultation-banner img {
+  width: 100%;
+  height: auto;
+}
+
 .contact-methods {
   display: flex;
   flex-wrap: wrap;
@@ -1291,6 +1357,7 @@ textarea {
   .price-list,
   .flow-list,
   .worry-list,
+  .diagnosis-list,
   .consultation-list,
   .second-panel,
   .premium-note,
