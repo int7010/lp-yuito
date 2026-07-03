@@ -52,17 +52,20 @@
           .join("");
 
         return `
-          <article class="news-item">
-            <div class="news-meta">
-              <span class="news-tag">${category}</span>
-              <time>${date}</time>
-            </div>
+          <details class="news-item">
+            <summary>
+              <span class="news-meta">
+                <span class="news-tag">${category}</span>
+                <time>${date}</time>
+              </span>
+              <span class="news-title">${title}</span>
+            </summary>
             <div class="news-content">
               <h3>${title}</h3>
               ${body ? `<p>${body}</p>` : ""}
               ${links ? `<div class="news-links">${links}</div>` : ""}
             </div>
-          </article>
+          </details>
         `;
       })
       .join("");
