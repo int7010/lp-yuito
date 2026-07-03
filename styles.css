@@ -232,7 +232,6 @@ h3 {
 .about-grid,
 .value-list,
 .voice-grid,
-.online-inner,
 .profile-grid,
 .news-list,
 .reason-list,
@@ -707,6 +706,32 @@ h3 {
   border-top: 5px solid var(--red);
 }
 
+.support-items {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.support-items li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.support-items li::before {
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+}
+
 .number {
   display: inline-block;
   margin-bottom: 28px;
@@ -843,48 +868,6 @@ h3 {
   color: var(--muted);
   font-size: 13px;
   text-align: center;
-}
-
-.online {
-  background: var(--green);
-  color: var(--white);
-}
-
-.online .eyebrow {
-  color: #f4d36e;
-}
-
-.online-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
-  gap: 36px;
-  align-items: center;
-}
-
-.online-inner p {
-  color: rgba(255, 255, 255, 0.86);
-}
-
-.check-list {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.check-list li {
-  padding: 15px 18px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  font-weight: 800;
-}
-
-.check-list li::before {
-  content: "✓";
-  margin-right: 10px;
-  color: #f4d36e;
 }
 
 .flow {
@@ -1250,7 +1233,6 @@ textarea {
   .about-grid,
   .value-list,
   .voice-grid,
-  .online-inner,
   .profile-grid,
   .news-list,
   .reason-list,
