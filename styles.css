@@ -827,10 +827,16 @@ h3 {
 
 .cta-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
   align-items: start;
   padding: 88px clamp(20px, 5vw, 72px);
+}
+
+.cta-copy,
+.contact-form {
+  width: min(100%, 920px);
+  margin-inline: auto;
 }
 
 .cta-copy p {
