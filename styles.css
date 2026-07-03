@@ -629,7 +629,19 @@ h3 {
 }
 
 .second-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
   background: var(--white);
+}
+
+.second-panel img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 8px;
 }
 
 .second-panel p {
@@ -779,6 +791,10 @@ h3 {
 }
 
 .premium-note {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
   width: min(1120px, 100%);
   margin: 18px auto 0;
   padding: 24px 28px;
@@ -787,6 +803,14 @@ h3 {
   border: 2px solid rgba(201, 34, 54, 0.32);
   border-radius: 8px;
   box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+}
+
+.premium-note img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 8px;
 }
 
 .premium-note span {
@@ -1234,6 +1258,8 @@ textarea {
   .flow-list,
   .worry-list,
   .consultation-list,
+  .second-panel,
+  .premium-note,
   .cta-section {
     grid-template-columns: 1fr;
   }
@@ -1258,6 +1284,11 @@ textarea {
 
   .plan-fit {
     min-height: auto;
+  }
+
+  .second-panel img,
+  .premium-note img {
+    height: 240px;
   }
 }
 
