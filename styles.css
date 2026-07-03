@@ -239,6 +239,10 @@ h3 {
 .price-list,
 .flow-list,
 .faq-list,
+.worry-panel,
+.second-panel,
+.consultation-list,
+.consultation-note,
 .cta-section {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -265,6 +269,67 @@ h3 {
 
 .about-grid p:last-child {
   margin-bottom: 0;
+}
+
+.worries {
+  background: var(--white);
+}
+
+.worry-panel,
+.second-panel {
+  padding: clamp(26px, 4vw, 44px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+}
+
+.worry-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.worry-list li {
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.worry-list li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 9px;
+  background: var(--red);
+  border-radius: 50%;
+  vertical-align: 0.1em;
+}
+
+.worry-panel > p {
+  max-width: 880px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--muted);
+  text-align: center;
+}
+
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.section-cta.left {
+  justify-content: flex-start;
 }
 
 .profile-panel {
@@ -552,6 +617,65 @@ h3 {
   color: var(--muted);
 }
 
+.second-opinion {
+  background: var(--paper);
+}
+
+.second-opinion .section-heading p:not(.eyebrow) {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.second-panel {
+  background: var(--white);
+}
+
+.second-panel p {
+  color: var(--muted);
+}
+
+.consultation {
+  background: var(--white);
+}
+
+.consultation-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.consultation-list article {
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.consultation-list span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.consultation-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.consultation-note {
+  margin-top: 22px;
+  padding: 18px 22px;
+  color: var(--muted);
+  background: #fff6f7;
+  border: 1px solid rgba(201, 34, 54, 0.18);
+  border-radius: 8px;
+  text-align: center;
+}
+
 .value {
   background: var(--white);
 }
@@ -618,6 +742,17 @@ h3 {
   color: var(--muted);
 }
 
+.plan-fit {
+  min-height: 108px;
+  margin-bottom: 18px;
+  padding: 14px;
+  color: var(--muted);
+  background: var(--paper);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .price-card dl {
   display: grid;
   gap: 0;
@@ -647,9 +782,24 @@ h3 {
   width: min(1120px, 100%);
   margin: 18px auto 0;
   padding: 24px 28px;
-  color: var(--white);
-  background: var(--green);
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid rgba(201, 34, 54, 0.32);
   border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+}
+
+.premium-note span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 12px;
+  color: var(--white);
+  background: var(--red);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .premium-note strong {
@@ -1082,6 +1232,8 @@ textarea {
   .reason-list,
   .price-list,
   .flow-list,
+  .worry-list,
+  .consultation-list,
   .cta-section {
     grid-template-columns: 1fr;
   }
@@ -1102,6 +1254,10 @@ textarea {
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .plan-fit {
+    min-height: auto;
   }
 }
 
@@ -1143,6 +1299,11 @@ textarea {
     text-align: center;
   }
 
+  .hero-actions,
+  .section-cta {
+    width: 100%;
+  }
+
   .outline-button {
     width: 100%;
   }
@@ -1157,6 +1318,13 @@ textarea {
 
   .section {
     padding: 64px 18px;
+  }
+
+  .worry-panel,
+  .second-panel,
+  .consultation-list article,
+  .premium-note {
+    padding: 22px;
   }
 
   .profile-panel img {
