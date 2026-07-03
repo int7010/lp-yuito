@@ -408,7 +408,7 @@ h3 {
   display: grid;
   grid-template-columns: 190px 1fr;
   gap: 22px;
-  align-items: center;
+  align-items: start;
   padding: 20px 24px;
   background: var(--white);
   border: 1px solid var(--line);
@@ -438,9 +438,40 @@ h3 {
 .news-item h3 {
   margin: 0;
   font-size: 18px;
+  line-height: 1.6;
 }
 
-.news-item a {
+.news-content {
+  display: grid;
+  gap: 10px;
+}
+
+.news-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.news-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  color: var(--red-dark);
+  background: #fff6f7;
+  border: 1px solid rgba(201, 34, 54, 0.22);
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.news-link:hover {
   border-bottom: 1px solid rgba(201, 34, 54, 0.35);
 }
 

@@ -12,6 +12,23 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
 
+  const normalizeLinks = (item) => {
+    if (Array.isArray(item.links)) {
+      return item.links;
+    }
+
+    if (item.url) {
+      return [
+        {
+          label: item.linkLabel || "詳しく見る",
+          url: item.url,
+        },
+      ];
+    }
+
+    return [];
+  };
+
   const render = (items) => {
     if (!Array.isArray(items) || items.length === 0) {
       list.innerHTML = '<p class="news-loading">現在掲載中のお知らせはありません。</p>';
@@ -24,10 +41,15 @@
         const date = escapeHtml(item.date || "");
         const category = escapeHtml(item.category || "お知らせ");
         const title = escapeHtml(item.title || "");
-        const url = item.url ? escapeHtml(item.url) : "";
-        const titleHtml = url
-          ? `<a href="${url}" target="_blank" rel="noopener">${title}</a>`
-          : `<span>${title}</span>`;
+        const body = item.body ? escapeHtml(item.body) : "";
+        const links = normalizeLinks(item)
+          .filter((link) => link && link.url)
+          .map((link) => {
+            const label = escapeHtml(link.label || "詳しく見る");
+            const url = escapeHtml(link.url);
+            return `<a class="news-link" href="${url}" target="_blank" rel="noopener">${label}</a>`;
+          })
+          .join("");
 
         return `
           <article class="news-item">
@@ -35,7 +57,11 @@
               <span class="news-tag">${category}</span>
               <time>${date}</time>
             </div>
-            <h3>${titleHtml}</h3>
+            <div class="news-content">
+              <h3>${title}</h3>
+              ${body ? `<p>${body}</p>` : ""}
+              ${links ? `<div class="news-links">${links}</div>` : ""}
+            </div>
           </article>
         `;
       })
