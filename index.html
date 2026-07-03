@@ -422,20 +422,63 @@
           </div>
         </div>
         <form class="contact-form" action="https://formsubmit.co/info@yuito-konkatsu.jp" method="post">
-          <input type="hidden" name="_subject" value="無料相談のお申し込み">
+          <input type="hidden" name="_subject" value="無料相談・お問い合わせ">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+          <div class="form-heading">
+            <h3>無料相談・お問い合わせフォーム</h3>
+            <p>送信後、内容を確認のうえ担当者よりご連絡いたします。</p>
+          </div>
+          <div class="form-row">
+            <label>
+              お名前（漢字）
+              <input type="text" name="お名前（漢字）" placeholder="山田 太郎" required>
+            </label>
+            <label>
+              お名前（かな）
+              <input type="text" name="お名前（かな）" placeholder="やまだ たろう" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              お電話番号
+              <input type="tel" name="お電話番号" placeholder="090-0000-0000">
+            </label>
+            <label>
+              メールアドレス
+              <input type="email" name="email" placeholder="sample@example.com" required>
+            </label>
+          </div>
           <label>
-            お名前
-            <input type="text" name="name" placeholder="山田 太郎" required>
+            お問い合わせ種別
+            <select name="お問い合わせ種別" required>
+              <option value="">選択してください</option>
+              <option value="無料相談を希望">無料相談を希望</option>
+              <option value="入会・料金について">入会・料金について</option>
+              <option value="活動内容について">活動内容について</option>
+              <option value="資料請求">資料請求</option>
+              <option value="その他">その他</option>
+            </select>
           </label>
           <label>
-            メールアドレス
-            <input type="email" name="email" placeholder="sample@example.com" required>
+            ご希望の連絡方法
+            <select name="ご希望の連絡方法">
+              <option value="メール">メール</option>
+              <option value="電話">電話</option>
+              <option value="どちらでも可">どちらでも可</option>
+            </select>
           </label>
           <label>
             ご相談内容
-            <textarea name="message" rows="4" placeholder="婚活で悩んでいること、相談したいことをご記入ください。" required></textarea>
+            <textarea name="ご相談内容" rows="5" placeholder="婚活で悩んでいること、相談したいこと、無料相談で聞きたいことをご記入ください。" required></textarea>
+          </label>
+          <p class="form-note">
+            送信後、確認メールが届かない場合は迷惑メールフォルダをご確認ください。あわせて info@yuito-konkatsu.jp からのメールを受信できるよう設定をお願いいたします。
+          </p>
+          <label class="privacy-check">
+            <input type="checkbox" name="個人情報の取り扱いへの同意" value="同意する" required>
+            <span><a href="privacy.html" target="_blank" rel="noopener">個人情報保護方針</a>に同意する</span>
           </label>
           <button class="primary-button form-button" type="submit">無料相談に申し込む</button>
         </form>
