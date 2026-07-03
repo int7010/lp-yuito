@@ -61,7 +61,6 @@
               <span class="news-title">${title}</span>
             </summary>
             <div class="news-content">
-              <h3>${title}</h3>
               ${body ? `<p>${body}</p>` : ""}
               ${links ? `<div class="news-links">${links}</div>` : ""}
             </div>

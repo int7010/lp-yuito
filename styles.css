@@ -462,8 +462,7 @@ h3 {
   white-space: nowrap;
 }
 
-.news-title,
-.news-item h3 {
+.news-title {
   margin: 0;
   color: var(--ink);
   font-size: 18px;
