@@ -421,18 +421,21 @@
             <a class="outline-button" href="#contact">フォームで問い合わせる</a>
           </div>
         </div>
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" action="https://formsubmit.co/info@yuito-konkatsu.jp" method="post">
+          <input type="hidden" name="_subject" value="無料相談のお申し込み">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <label>
             お名前
-            <input type="text" name="name" placeholder="山田 太郎">
+            <input type="text" name="name" placeholder="山田 太郎" required>
           </label>
           <label>
             メールアドレス
-            <input type="email" name="email" placeholder="sample@example.com">
+            <input type="email" name="email" placeholder="sample@example.com" required>
           </label>
           <label>
             ご相談内容
-            <textarea name="message" rows="4" placeholder="婚活で悩んでいること、相談したいことをご記入ください。"></textarea>
+            <textarea name="message" rows="4" placeholder="婚活で悩んでいること、相談したいことをご記入ください。" required></textarea>
           </label>
           <button class="primary-button form-button" type="submit">無料相談に申し込む</button>
         </form>
