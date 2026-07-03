@@ -761,6 +761,57 @@ h3 {
   background: var(--paper);
 }
 
+.price .section-heading p:not(.eyebrow) {
+  max-width: 900px;
+  margin: 12px auto 0;
+  color: var(--muted);
+}
+
+.price-table-wrap {
+  width: min(1120px, 100%);
+  margin: 0 auto 24px;
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(73, 36, 43, 0.08);
+}
+
+.price-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+  padding: 16px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.price-table thead th {
+  color: var(--red-dark);
+  background: #fff1f3;
+  font-size: 13px;
+}
+
+.price-table tbody th {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.price-table tbody tr:last-child th,
+.price-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.price-table .highlight-row th,
+.price-table .highlight-row td {
+  background: #fffaf0;
+}
+
 .price-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -792,19 +843,31 @@ h3 {
   font-weight: 800;
 }
 
+.plan-subtitle {
+  margin: -4px 0 14px;
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
 .plan-lead {
-  min-height: 60px;
   color: var(--muted);
 }
 
 .plan-fit {
-  min-height: 108px;
   margin-bottom: 18px;
   padding: 14px;
   color: var(--muted);
   background: var(--paper);
   border-radius: 8px;
   font-size: 14px;
+  line-height: 1.7;
+}
+
+.plan-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 12px;
   line-height: 1.7;
 }
 
