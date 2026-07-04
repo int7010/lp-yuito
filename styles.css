@@ -360,7 +360,7 @@ h3 {
 }
 
 .diagnosis-list a {
-  display: block;
+  display: grid;
   overflow: hidden;
   background: var(--white);
   border: 1px solid var(--line);
@@ -377,6 +377,24 @@ h3 {
 .diagnosis-list img {
   width: 100%;
   height: auto;
+}
+
+.diagnosis-list span {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  color: var(--red-dark);
+  font-weight: 800;
+}
+
+.external-note {
+  width: min(760px, 100%);
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
 }
 
 .profile-panel {
