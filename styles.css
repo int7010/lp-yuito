@@ -967,6 +967,18 @@ h3 {
   line-height: 1.75;
 }
 
+.trial-note {
+  width: min(1120px, 100%);
+  margin: 14px auto 0;
+  padding: 14px 16px;
+  color: var(--muted);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
 .premium-note {
   display: grid;
   grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1fr);
