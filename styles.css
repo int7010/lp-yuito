@@ -134,6 +134,13 @@ img {
   text-shadow: 0 2px 18px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.85);
 }
 
+.hero-copy .eyebrow {
+  color: #1f2f3a;
+  font-size: 15px;
+  font-weight: 900;
+  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.95), 0 1px 4px rgba(255, 255, 255, 0.9);
+}
+
 .eyebrow {
   margin: 0 0 14px;
   color: var(--gold);
@@ -176,6 +183,12 @@ h3 {
   margin-right: auto;
   color: var(--muted);
   font-size: 18px;
+}
+
+.hero-copy .lead {
+  color: #2f3658;
+  font-weight: 700;
+  text-shadow: 0 2px 16px rgba(255, 255, 255, 0.96), 0 1px 4px rgba(255, 255, 255, 0.92);
 }
 
 .hero-actions {
