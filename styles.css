@@ -109,9 +109,7 @@ img {
   inset: 0;
   z-index: 1;
   content: "";
-  background:
-    linear-gradient(90deg, rgba(248, 243, 236, 0.78) 0%, rgba(248, 243, 236, 0.66) 46%, rgba(248, 243, 236, 0.38) 100%),
-    rgba(255, 255, 255, 0.08);
+  background: transparent;
 }
 
 .hero-bg-image {
@@ -123,8 +121,8 @@ img {
   max-width: none;
   object-fit: cover;
   object-position: center center;
-  opacity: 0.9;
-  filter: saturate(0.96) contrast(0.98);
+  opacity: 1;
+  filter: none;
 }
 
 .hero-copy {
@@ -133,7 +131,7 @@ img {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  text-shadow: 0 2px 18px rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 18px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.85);
 }
 
 .eyebrow {
@@ -1497,7 +1495,7 @@ textarea {
   }
 
   .hero-bg-image {
-    opacity: 0.78;
+    opacity: 1;
   }
 
   .about-card > img {
@@ -1557,7 +1555,7 @@ textarea {
 
   .hero-bg-image {
     object-position: center center;
-    opacity: 0.72;
+    opacity: 1;
   }
 
   h1 {
